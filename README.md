@@ -1,9 +1,13 @@
 # electron-chromium-ffmpeg-hevc-prebuilt
-Built using patches provided by StaZhu:
+Big thank you to StaZhu for the original patches:
+
 https://github.com/StaZhu/enable-chromium-hevc-hardware-decoding
 
+=============================================================================
 
-Initiall follow the build instructions: https://www.electronjs.org/docs/latest/development/build-instructions-gn
+
+
+- Initiall follow the build instructions: https://www.electronjs.org/docs/latest/development/build-instructions-gn
 
 - after the gclient sync -f step, **EDIT** and run the patch.sh script
 
