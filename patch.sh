@@ -1,11 +1,15 @@
 #!/bin/bash
 
-## follow https://www.electronjs.org/docs/latest/development/build-instructions-gn
-## change your source to checkout electron src v37.2.4
-## then run this after the gclient sync step
+## make sure these are correct
+electron_src_dir="$HOME/electron/src"   ## CHANGE THIS TO YOUR ELECTRON SOURCE DIRECTORY
+electronversion="v37.2.4" ## change to desired version if supported by https://raw.githubusercontent.com/BranchBit/electron-chromium-ffmpeg-hevc-prebuil
+
+# cd "$electron_src_dir/electron"
+# git checkout "${electronversion}"
+# gclient sync -f
+
 
 electron_src_dir="$HOME/electron/src"   ## CHANGE THIS TO YOUR ELECTRON SOURCE DIRECTORY
-
 electronversion="v37.2.4"
 
 # Download the necessary files
