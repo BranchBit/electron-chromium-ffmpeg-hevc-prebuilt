@@ -34,8 +34,6 @@ cd "$electron_src_dir" || { echo "Failed to change directory to $electron_src_di
 
 # apply the patches from the old current dir to the new current dir
 echo "Changed directory to: $(pwd)"
-echo "Running directory is: $current_dir"
-echo "Current directory is: $electron_src_dir"
 
 
 read -p "Press any key to resume enable-hevc-ffmpeg-decoding.patch ..."
