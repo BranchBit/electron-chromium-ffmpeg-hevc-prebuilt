@@ -13,7 +13,7 @@ echo "Downloading necessary files..."
 curl https://raw.githubusercontent.com/BranchBit/electron-chromium-ffmpeg-hevc-prebuilt/refs/tags/${electronversion}/add-hevc-ffmpeg-decoder-parser.js -o add-hevc-ffmpeg-decoder-parser.js
 curl https://raw.githubusercontent.com/BranchBit/electron-chromium-ffmpeg-hevc-prebuilt/refs/tags/${electronversion}/add-hevc-ffmpeg-decoder-parser.patch -o add-hevc-ffmpeg-decoder-parser.patch
 curl https://raw.githubusercontent.com/BranchBit/electron-chromium-ffmpeg-hevc-prebuilt/refs/tags/${electronversion}/change-libavcodec-header.patch -o change-libavcodec-header.patch
-curl https://raw.githubusercontent.com/BranchBit/electron-chromium-ffmpeg-hevc-prebuilt/refs/tags${electronversion}/enable-hevc-ffmpeg-decoding.patch -o enable-hevc-ffmpeg-decoding.patch
+curl https://raw.githubusercontent.com/BranchBit/electron-chromium-ffmpeg-hevc-prebuilt/refs/tags/${electronversion}/enable-hevc-ffmpeg-decoding.patch -o enable-hevc-ffmpeg-decoding.patch
 
 
 # Check if the current directory is correct
