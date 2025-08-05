@@ -42,14 +42,14 @@ cd "$electron_src_dir/third_party/ffmpeg" || { echo "Failed to change directory 
 echo "Changed directory to: $(pwd)"
 # apply the patches from the old current dir to the new current dir
 git apply --ignore-whitespace  "$current_dir/change-libavcodec-header.patch" --verbose
-node "$electron_src_dir/add-hevc-ffmpeg-decoder-parser.js"
+node "$current_dir/add-hevc-ffmpeg-decoder-parser.js"
 
 
 #echo done finish script
 echo "Patches applied successfully."
 
 
-
+read -rsn1 -p"Press any key to continue";echo
 #add-hevc-ffmpeg-decoder-parser.js where ffmpeg_generated.gn is
 #Update ffmpeg patch
 #4 months ago
