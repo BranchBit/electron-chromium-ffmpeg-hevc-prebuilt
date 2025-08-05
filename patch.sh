@@ -4,8 +4,7 @@
 ## change your source to checkout electron src v37.2.4
 ## then run this after the gclient sync step
 
-
-electron_src_dir="/home/sam/electron/src" ## CHANGE THIS TO YOUR ELECTRON SOURCE DIRECTORY
+electron_src_dir="$HOME/electron/src"   ## CHANGE THIS TO YOUR ELECTRON SOURCE DIRECTORY
 
 # Download the necessary files
 echo "Downloading necessary files..."
