@@ -1,8 +1,22 @@
 #!/bin/bash
 
-## make sure these are correct
-electron_src_dir="$HOME/electron/src"   ## CHANGE THIS TO YOUR ELECTRON SOURCE DIRECTORY
-electronversion="v37.2.4" ## change to desired version if supported by https://raw.githubusercontent.com/BranchBit/electron-chromium-ffmpeg-hevc-prebuil
+# Check if the first argument is provided
+if [ -z "$1" ]; then
+  echo "❌ Error: You must provide a path as the first argument."
+  echo "Usage: $0 /path/to/electron/src"
+  exit 1
+fi
+
+# Assign the argument to the electron_src_dir variable
+electron_src_dir="$1"
+
+# Check if the path exists and is a directory
+if [ ! -d "$electron_src_dir" ]; then
+  echo "❌ Error: '$electron_src_dir' does not exist or is not a directory."
+  exit 1
+fi
+
+echo "✅ Electron source directory: $electron_src_dir"
 
 # cd "$electron_src_dir/electron"
 # git checkout "${electronversion}"
