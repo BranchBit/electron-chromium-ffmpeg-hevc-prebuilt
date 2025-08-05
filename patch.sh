@@ -16,7 +16,7 @@ curl https://raw.githubusercontent.com/StaZhu/enable-chromium-hevc-hardware-deco
 
 # Check if the current directory is correct
 current_dir=$(pwd)
-echo "Current directory is: $current_dir"
+echo "Working directory is: $current_dir"
 echo "Current directory is: $electron_src_dir"
 
 
@@ -32,7 +32,12 @@ cd "$electron_src_dir" || { echo "Failed to change directory to $electron_src_di
 
 # apply the patches from the old current dir to the new current dir
 echo "Changed directory to: $(pwd)"
-git apply --ignore-whitespace  "$current_dir/add-hevc-ffmpeg-decoder-parser.patch" --verbose
+echo "Running directory is: $current_dir"
+echo "Current directory is: $electron_src_dir"
+
+
+read -p "Press any key to resume enable-hevc-ffmpeg-decoding.patch ..."
+
 git apply --ignore-whitespace  "$current_dir/enable-hevc-ffmpeg-decoding.patch" --verbose
 
 
@@ -40,16 +45,28 @@ git apply --ignore-whitespace  "$current_dir/enable-hevc-ffmpeg-decoding.patch" 
 #change dir to old current dir/third_part/ffmpeg
 cd "$electron_src_dir/third_party/ffmpeg" || { echo "Failed to change directory to $electron_src_dir/third_party/ffmpeg"; exit 1; }
 echo "Changed directory to: $(pwd)"
+
+
+read -p "Press any key to resume add-hevc-ffmpeg-decoder-parser.patch ..."
+
+git apply --ignore-whitespace  "$current_dir/add-hevc-ffmpeg-decoder-parser.patch" --verbose
+
+
+read -p "Press any key to resume change-libavcodec-header.patch ..."
 # apply the patches from the old current dir to the new current dir
 git apply --ignore-whitespace  "$current_dir/change-libavcodec-header.patch" --verbose
+
+read -p "Press any key to resume add-hevc-ffmpeg-decoder-parser.js ..."
 node "$current_dir/add-hevc-ffmpeg-decoder-parser.js"
+
+
 
 
 #echo done finish script
 echo "Patches applied successfully."
+read -p "Press any key to end ..."
 
 
-read -rsn1 -p"Press any key to continue";echo
 #add-hevc-ffmpeg-decoder-parser.js where ffmpeg_generated.gn is
 #Update ffmpeg patch
 #4 months ago
