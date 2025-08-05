@@ -3,7 +3,13 @@ Big thank you to StaZhu for the original patches:
 
 https://github.com/StaZhu/enable-chromium-hevc-hardware-decoding
 
-=============================================================================
+===========================================================================
+
+Prebuilt versions are available (some) at https://github.com/BranchBit/electron-chromium-ffmpeg-hevc-prebuilt/releases
+
+===========================================================================
+
+Or build yourself:
 
 
 
