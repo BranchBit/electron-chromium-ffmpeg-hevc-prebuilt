@@ -8,10 +8,6 @@ electronversion="v37.2.4" ## change to desired version if supported by https://r
 # git checkout "${electronversion}"
 # gclient sync -f
 
-
-electron_src_dir="$HOME/electron/src"   ## CHANGE THIS TO YOUR ELECTRON SOURCE DIRECTORY
-electronversion="v37.2.4"
-
 # Download the necessary files
 echo "Downloading necessary files..."
 curl https://raw.githubusercontent.com/BranchBit/electron-chromium-ffmpeg-hevc-prebuilt/refs/tags/${electronversion}/add-hevc-ffmpeg-decoder-parser.js -o add-hevc-ffmpeg-decoder-parser.js
